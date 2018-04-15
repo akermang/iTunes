@@ -65,11 +65,13 @@ const trHoverHandler = (event) => {
         ifrm.setAttribute('id', 'ifrm');
         $("#player").html(ifrm);
         ifrm.setAttribute('src', url);
+        $("div.btn-player").show();
     }
 }
 
 const closePlayer = () => {
     $("div.player").remove();
+    $("div.btn-player").remove();
 } 
 
 
