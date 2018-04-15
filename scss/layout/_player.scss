@@ -4,3 +4,11 @@ div.player {
     left: calc(50% - 150px);
     z-index: 100;
 }
+
+div.btn-player{
+    position: fixed;
+    z-index: 120;
+    color: beige;
+    top:  calc(50% - 71px);
+    left: calc(50% + 130px);
+}

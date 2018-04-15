@@ -68,6 +68,9 @@ const trHoverHandler = (event) => {
     }
 }
 
+const closePlayer = () => {
+    $("div.player").remove();
+} 
 
 
 
