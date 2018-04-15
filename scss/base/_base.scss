@@ -31,6 +31,14 @@ tr {
     display: block;
 }
 
+tr.tr-data:hover{
+    background: azure;
+}
+
+tr.result-title{
+    display: none;
+}
+
 .data-container {
     width: 150px;
     vertical-align: top;
@@ -72,6 +80,7 @@ tr {
 }
 
 .wrapper {
+    display: none;
     margin: 60px auto;
     text-align: center;
 }

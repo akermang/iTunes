@@ -15,9 +15,9 @@ const limitDisplayResult = (data, limiter) => {
 }
 
 const filterItensByPage = (array, page) => {
-    let n = page * 10 ;
+    let n = page * 10;
     let items = array.filter((item, i) => {
-        return i <= n  &&  i > n - 10;
+        return i < n && i >= n - 10;
     })
     return items;
 }
@@ -35,8 +35,8 @@ const createList = (array) => {
 }
 
 const createListItem = (item) => {
-    let { artistName, kind, trackName, trackPrice, releaseDate, country, artistViewUrl } = item;
-    let obj = { artistName, kind, trackName, trackPrice, releaseDate, country, artistViewUrl };
+    let { artistName, kind, trackName, trackPrice, releaseDate, country, artistViewUrl, previewUrl } = item;
+    let obj = { artistName, kind, trackName, trackPrice, releaseDate, country, artistViewUrl, previewUrl };
     obj.releaseDate = dateFormat(releaseDate)
     return obj;
 }
@@ -44,10 +44,10 @@ const createListItem = (item) => {
 const createTable = (items) => {
     let html = [];
     html.push('<table class="result-table"><tbody>');
-    html.push('<tr><td><h1>Youer Search Results</h1></td></tr>');
+    html.push('<tr class="result-title"><td><h1>Youer Search Results</h1></td></tr>');
     for (var i = 0; i < items.length; ++i) {
         let item = items[i];
-        html.push(`<tr><td class="data-container artistName"><a class="item-link" href="${item.artistViewUrl}" target="_blank"> ${item.artistName} </a></td>`);
+        html.push(`<tr class="tr-data" id="tr${i}" previewUrl="${item.previewUrl}" onmouseover="trHoverHandler(event)"><td class="data-container artistName"><a class="item-link" href="${item.artistViewUrl}" target="_blank"> ${item.artistName} </a></td>`);
         html.push(`<td class="data-container kind"><span>${item.kind}</span></td>`);
         html.push(`<td class="data-container trackName"><span>${item.trackName}</span></td>`);
         html.push(`<td class="data-container trackPrice"><span>${item.trackPrice}</span></td>`);

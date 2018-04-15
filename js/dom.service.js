@@ -13,11 +13,11 @@ const validateForm = (keyWord, type, limitResult) => {
         massageWrap.show();
         massage.text(formMassage.code1 + formMassage.code2 + formMassage.code3);
         return validateForm;
-    } else if (!keyWord && type == "Select" && limitResult ) {
+    } else if (!keyWord && type == "Select" && limitResult) {
         massageWrap.show();
         massage.text(formMassage.code1 + formMassage.code2);
         return validateForm;
-    }else if (!keyWord && type !== "Select" && !limitResult ) {
+    } else if (!keyWord && type !== "Select" && !limitResult) {
         massageWrap.show();
         massage.text(formMassage.code1 + formMassage.code3);
         return validateForm;
@@ -29,23 +29,23 @@ const validateForm = (keyWord, type, limitResult) => {
         massageWrap.show();
         massage.text(formMassage.code3);
         return validateForm;
-    }else if (keyWord && type == "Select" && limitResult) {
+    } else if (keyWord && type == "Select" && limitResult) {
         massageWrap.show();
         massage.text(formMassage.code2);
         return validateForm;
-    }else if (keyWord && type == "Select" && !limitResult) {
+    } else if (keyWord && type == "Select" && !limitResult) {
         massageWrap.show();
         massage.text(formMassage.code2 + formMassage.code3);
         return validateForm;
-    }else if (keyWord && type !== "Select" && !limitResult) {
+    } else if (keyWord && type !== "Select" && !limitResult) {
         massageWrap.show();
         massage.text(formMassage.code3);
         return validateForm;
-    }else if (keyWord && type !== "Select" && limitResult) {
-         validateForm = true;
-         massage.text("");
-         searchButton[0].disabled = false;
-         return validateForm;
+    } else if (keyWord && type !== "Select" && limitResult) {
+        validateForm = true;
+        massage.text("");
+        searchButton[0].disabled = false;
+        return validateForm;
     }
     return validateForm;
 }
@@ -55,7 +55,17 @@ const massageConfirm = () => {
     searchButton[0].disabled = false;
     $("#massage-cont").text("");
     $("#massage-wrap").hide();
+}
 
+const trHoverHandler = (event) => {
+    let obj = event.target;
+    let url = obj.getAttribute("previewUrl")
+    if(url) {
+        let ifrm = document.createElement('iframe');
+        ifrm.setAttribute('id', 'ifrm');
+        $("#player").html(ifrm);
+        ifrm.setAttribute('src', url);
+    }
 }
 
 

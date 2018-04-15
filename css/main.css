@@ -36,13 +36,23 @@ tr {
 }
 
 /* line 34, ../scss/base/_base.scss */
+tr.tr-data:hover {
+  background: azure;
+}
+
+/* line 38, ../scss/base/_base.scss */
+tr.result-title {
+  display: none;
+}
+
+/* line 42, ../scss/base/_base.scss */
 .data-container {
   width: 150px;
   vertical-align: top;
   padding-left: 15px;
 }
 
-/* line 43, ../scss/base/_base.scss */
+/* line 51, ../scss/base/_base.scss */
 .item-link,
 .item-link:hover,
 .item-link:visited,
@@ -51,60 +61,61 @@ tr {
   color: #333;
 }
 
-/* line 48, ../scss/base/_base.scss */
+/* line 56, ../scss/base/_base.scss */
 .title {
   color: #5786bd;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* line 54, ../scss/base/_base.scss */
+/* line 62, ../scss/base/_base.scss */
 .subtitle {
   color: #777;
   font-size: 12px;
 }
 
-/* line 59, ../scss/base/_base.scss */
+/* line 67, ../scss/base/_base.scss */
 .price {
   color: #333;
   font-weight: bold;
 }
 
-/* line 64, ../scss/base/_base.scss */
+/* line 72, ../scss/base/_base.scss */
 .bin {
   color: #777;
   font-size: 12px;
 }
 
-/* line 69, ../scss/base/_base.scss */
+/* line 77, ../scss/base/_base.scss */
 .fs {
   font-size: 12px;
   font-weight: bold;
 }
 
-/* line 74, ../scss/base/_base.scss */
+/* line 82, ../scss/base/_base.scss */
 .wrapper {
+  display: none;
   margin: 60px auto;
   text-align: center;
 }
 
-/* line 79, ../scss/base/_base.scss */
+/* line 88, ../scss/base/_base.scss */
 h1 {
   margin-bottom: 1.25em;
 }
 
-/* line 83, ../scss/base/_base.scss */
+/* line 92, ../scss/base/_base.scss */
 #pagination-demo {
   display: inline-block;
   margin-bottom: 1.75em;
 }
 
-/* line 88, ../scss/base/_base.scss */
+/* line 97, ../scss/base/_base.scss */
 #pagination-demo li {
   display: inline-block;
 }
 
-/* line 92, ../scss/base/_base.scss */
+/* line 101, ../scss/base/_base.scss */
 .page-content {
   background: #eee;
   display: inline-block;
@@ -185,7 +196,7 @@ table {
   margin-bottom: 5px;
   box-shadow: 0px 3px 6px #452848d1;
 }
-/* line 7, ../scss/layout/_filter.scss */
+/* line 6, ../scss/layout/_filter.scss */
 .filter_container form {
   display: block;
   margin: auto;
@@ -194,26 +205,26 @@ table {
   padding-left: 30px;
   padding-top: 20px;
 }
-/* line 16, ../scss/layout/_filter.scss */
+/* line 13, ../scss/layout/_filter.scss */
 .filter_container form .filter_listbox {
   margin: 0% 2% 0% 0%;
   position: static;
   display: inline-block;
 }
-/* line 21, ../scss/layout/_filter.scss */
+/* line 17, ../scss/layout/_filter.scss */
 .filter_container form .filter_listbox label {
   font-size: 18px;
   color: #5786bd;
   display: flex;
   margin-bottom: 2%;
-  font-family: 'CustomFont','Helvetica Neue',Arial !important;
+  font-family: 'CustomFont', 'Helvetica Neue', Arial !important;
 }
-/* line 29, ../scss/layout/_filter.scss */
+/* line 24, ../scss/layout/_filter.scss */
 .filter_container form .filter_listbox .filter_select {
   width: 160px;
   height: 30px;
 }
-/* line 37, ../scss/layout/_filter.scss */
+/* line 30, ../scss/layout/_filter.scss */
 .filter_container .massage {
   display: none;
   color: #475361f2;
@@ -228,13 +239,21 @@ table {
   top: 5px;
   left: calc(50% - 124px);
 }
-/* line 51, ../scss/layout/_filter.scss */
+/* line 43, ../scss/layout/_filter.scss */
 .filter_container .massage p {
   margin: 5px auto;
 }
-/* line 55, ../scss/layout/_filter.scss */
+/* line 46, ../scss/layout/_filter.scss */
 .filter_container .massage p.massage-cont {
   color: #ffffff;
+}
+
+/* line 1, ../scss/layout/_player.scss */
+div.player {
+  position: fixed;
+  top: calc(50% - 75px);
+  left: calc(50% - 150px);
+  z-index: 100;
 }
 
 /* line 1, ../scss/modules/_buttons.scss */
@@ -248,12 +267,12 @@ table {
   margin: 5 5 10 5;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   /* line 21, ../scss/base/_queries.scss */
   main .data-container {
     max-width: 155px;
     overflow: scroll;
-    font-size: 67%;
+    font-size: 46%!important;
   }
   /* line 27, ../scss/base/_queries.scss */
   main .filter_container {

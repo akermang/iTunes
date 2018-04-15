@@ -1,4 +1,4 @@
-$mobileMaxWidth: 480px;
+$mobileMaxWidth: 550px;
 $tabletMinWidth: 1240px;
 
 // desktop
@@ -21,7 +21,7 @@ $tabletMinWidth: 1240px;
     .data-container{
       max-width: 155px;
       overflow: scroll;
-      font-size: 67%;
+      font-size: 46%!important;
     }
 
     .filter_container{
