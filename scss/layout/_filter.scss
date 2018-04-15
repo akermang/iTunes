@@ -1,0 +1,60 @@
+.filter_container{
+    background: #212021;
+    height: 187px;
+    margin-bottom: 5px;
+    box-shadow: 0px 3px 6px #452848d1;
+    
+    form{
+        display: block;
+        margin: auto;
+        width: auto;
+        text-align: left;
+        padding-left: 30px;
+        padding-top: 20px;
+
+        
+        .filter_listbox{
+            margin: 0% 2% 0% 0%;
+             position: static;
+             display: inline-block;
+
+             label{
+                font-size: 18px;
+                color: #5786bd;
+                display: flex;
+                margin-bottom: 2%;
+                font-family: 'CustomFont','Helvetica Neue',Arial !important;
+            }
+
+            .filter_select{
+                width: 160px;
+                height: 30px;
+            }
+        }
+        
+    }
+
+    .massage{
+        display: none;
+        color: #475361f2;
+        width: 229px;
+        margin: 0 auto;
+        text-align: center;
+        background: #e2b46d;
+        padding: 10px 50px;
+        border-radius: 8px;
+        border: 2px solid blue;
+        // transform: translateY(-76px);
+        position: absolute;
+        top: 5px;
+        left: calc(50% - 124px);
+        p{
+            margin: 5px auto;
+        }
+
+        p.massage-cont{
+            color: #ffffff;
+        }
+    }
+
+}

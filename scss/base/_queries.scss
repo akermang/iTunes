@@ -1,0 +1,36 @@
+$mobileMaxWidth: 480px;
+$tabletMinWidth: 1240px;
+
+// desktop
+@media (min-width: $tabletMinWidth) {
+  main {
+    // background: red;
+  }
+}
+
+// tablet
+@media (max-width: $tabletMinWidth) {
+  main {
+    // background: yellow;
+  }
+}
+
+// mobile
+@media (max-width: $mobileMaxWidth) {
+  main {
+    .data-container{
+      max-width: 155px;
+      overflow: scroll;
+      font-size: 67%;
+    }
+
+    .filter_container{
+      height: 240px;
+    }
+
+    .btn-info{
+      width: 91%;
+      margin: 20px auto;
+    }
+  }
+}

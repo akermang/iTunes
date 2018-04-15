@@ -3,9 +3,7 @@ const goSearch = (event)=>{
      let keyWord = $("#key_word").val()
      let type = $('#select1 option:selected').val();
      let limitResult= $("#number_result").val()
-
      let validFormStatus = validateForm(keyWord, type, limitResult)
-     console.log(validFormStatus)
 
      type? type = "&entity=" + type : null;
      let searchURL= 'https://itunes.apple.com/search?term=' + keyWord + type ;
@@ -14,7 +12,9 @@ const goSearch = (event)=>{
         const renderResults = (results)=>{
             let resultsToDisplay = results;
             resultsToDisplay = limitDisplayResult(results, limitResult);
+            state.items = resultsToDisplay;
             resultsToDisplay = createList(resultsToDisplay);
+            resultsToDisplay = filterItensByPage(resultsToDisplay, 1)
             let table = createTable(resultsToDisplay);
             document.getElementById("results").innerHTML = table;
         }

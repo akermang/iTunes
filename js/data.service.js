@@ -1,13 +1,25 @@
+let state = {
+    pageNo: 1,
+    items: []
+}
+
 const limitDisplayResult = (data, limiter) => {
     let resultArray = data.results;
     if (resultArray.length > limiter) {
         resultArray = data.results.filter((item, i) => {
             return i < limiter;
         })
-        console.log(resultArray)
         return resultArray
     }
     return resultArray
+}
+
+const filterItensByPage = (array, page) => {
+    let n = page * 10 ;
+    let items = array.filter((item, i) => {
+        return i <= n  &&  i > n - 10;
+    })
+    return items;
 }
 
 dateFormat = (date) => {
@@ -31,7 +43,7 @@ const createListItem = (item) => {
 
 const createTable = (items) => {
     let html = [];
-    html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
+    html.push('<table class="result-table"><tbody>');
     html.push('<tr><td><h1>Youer Search Results</h1></td></tr>');
     for (var i = 0; i < items.length; ++i) {
         let item = items[i];

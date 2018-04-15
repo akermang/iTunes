@@ -1,0 +1,98 @@
+main {
+    height: 100%;
+}
+
+// eBay css //
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: #777;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+div#results{
+    margin: 0 auto;
+    width: 95%;
+}
+
+table.result-table{
+    margin: 0 auto;
+}
+
+tr {
+    border-bottom: 1px solid #CCC;
+    padding: 15px 0;
+    display: block;
+}
+
+.data-container {
+    width: 150px;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.item-link,
+.item-link:hover,
+.item-link:visited,
+.item-link:active {
+    text-decoration: none;
+    color: #333;
+}
+
+.title {
+    color: #5786bd;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 12px;
+}
+
+.price {
+    color: #333;
+    font-weight: bold;
+}
+
+.bin {
+    color: #777;
+    font-size: 12px;
+}
+
+.fs {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wrapper {
+    margin: 60px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.25em;
+}
+
+#pagination-demo {
+    display: inline-block;
+    margin-bottom: 1.75em;
+}
+
+#pagination-demo li {
+    display: inline-block;
+}
+
+.page-content {
+    background: #eee;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    max-width: 660px;
+}
