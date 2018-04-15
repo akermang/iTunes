@@ -1,6 +1,6 @@
 let state = {
-    pageNo: 1,
-    items: []
+        pageNo: 1,
+        items: []
 }
 
 const limitDisplayResult = (data, limiter) => {
@@ -47,7 +47,9 @@ const createTable = (items) => {
     html.push('<tr class="result-title"><td><h1>Youer Search Results</h1></td></tr>');
     for (var i = 0; i < items.length; ++i) {
         let item = items[i];
-        html.push(`<tr class="tr-data" id="tr${i}" previewUrl="${item.previewUrl}" onmouseover="trHoverHandler(event)"><td class="data-container artistName"><a class="item-link" href="${item.artistViewUrl}" target="_blank"> ${item.artistName} </a></td>`);
+        html.push(`<tr class="tr-data" id="tr${i}" previewUrl="${item.previewUrl}"
+         onmouseover="trHoverHandler(event)"><td class="data-container artistName">
+         <a class="item-link" href="${item.artistViewUrl}" target="_blank"> ${item.artistName} </a></td>`);
         html.push(`<td class="data-container kind"><span>${item.kind}</span></td>`);
         html.push(`<td class="data-container trackName"><span>${item.trackName}</span></td>`);
         html.push(`<td class="data-container trackPrice"><span>$${item.trackPrice}</span></td>`);
