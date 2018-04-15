@@ -22,7 +22,7 @@ const filterItensByPage = (array, page) => {
     return items;
 }
 
-dateFormat = (date) => {
+const dateFormat = (date) => {
     return date.slice(0, 10);
 }
 
