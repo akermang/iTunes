@@ -50,7 +50,7 @@ const createTable = (items) => {
         html.push(`<tr class="tr-data" id="tr${i}" previewUrl="${item.previewUrl}" onmouseover="trHoverHandler(event)"><td class="data-container artistName"><a class="item-link" href="${item.artistViewUrl}" target="_blank"> ${item.artistName} </a></td>`);
         html.push(`<td class="data-container kind"><span>${item.kind}</span></td>`);
         html.push(`<td class="data-container trackName"><span>${item.trackName}</span></td>`);
-        html.push(`<td class="data-container trackPrice"><span>${item.trackPrice}</span></td>`);
+        html.push(`<td class="data-container trackPrice"><span>$${item.trackPrice}</span></td>`);
         html.push(`<td class="data-container releaseDate"><span>${item.releaseDate}</span></td>`);
         html.push(`<td class="data-container country"><span>${item.country}</span></td></tr>`);
     }
