@@ -8,45 +8,22 @@ const validateForm = (keyWord, type, limitResult) => {
     let validateForm = false;
     let searchButton = $("#goBtn");
     searchButton[0].disabled = true
-    let massage = $("#massage-cont");
-    if (!limitResult && type == "Select" && !keyWord) {
+    let massageObj = $("#massage-cont");
+    let massage = "";
+
+    !keyWord ? massage += formMassage.code1 : null;
+    type == "Select" ? massage += formMassage.code2 : null;
+    !limitResult ? massage += formMassage.code3 : null;
+
+    if (massage) {
         massageWrap.show();
-        massage.text(formMassage.code1 + formMassage.code2 + formMassage.code3);
-        return validateForm;
-    } else if (!keyWord && type == "Select" && limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code1 + formMassage.code2);
-        return validateForm;
-    } else if (!keyWord && type !== "Select" && !limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code1 + formMassage.code3);
-        return validateForm;
-    } else if (!keyWord && type !== "Select" && limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code1);
-        return validateForm;
-    } else if (keyWord && type !== "Select" && !limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code3);
-        return validateForm;
-    } else if (keyWord && type == "Select" && limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code2);
-        return validateForm;
-    } else if (keyWord && type == "Select" && !limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code2 + formMassage.code3);
-        return validateForm;
-    } else if (keyWord && type !== "Select" && !limitResult) {
-        massageWrap.show();
-        massage.text(formMassage.code3);
-        return validateForm;
-    } else if (keyWord && type !== "Select" && limitResult) {
-        validateForm = true;
-        massage.text("");
-        searchButton[0].disabled = false;
+        massageObj.text(massage);
         return validateForm;
     }
+
+    searchButton[0].disabled = false;
+    massageObj.text("");
+    validateForm = true;
     return validateForm;
 }
 
@@ -60,7 +37,7 @@ const massageConfirm = () => {
 const trHoverHandler = (event) => {
     let obj = event.target;
     let url = obj.getAttribute("previewUrl")
-    if(url) {
+    if (url) {
         let ifrm = document.createElement('iframe');
         ifrm.setAttribute('id', 'ifrm');
         $("#player").html(ifrm);
@@ -72,7 +49,7 @@ const trHoverHandler = (event) => {
 const closePlayer = () => {
     $("div.player").remove();
     $("div.btn-player").remove();
-} 
+}
 
 
 
