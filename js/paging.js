@@ -1,6 +1,6 @@
 $('#pagination-demo').twbsPagination({
     totalPages: 5,
-    visiblePages: 10,
+    visiblePages: 2,
     next: 'Next',
     prev: 'Prev',
     onPageClick: function (event, page) {
@@ -9,6 +9,7 @@ $('#pagination-demo').twbsPagination({
         let tableByPage = createTable(itemsByPage);
 
         document.getElementById("results").innerHTML = tableByPage;
+        itemsByPage.length > 0? $("tr.result-title").show(): null;
         $('#page-content').text('Page ' + page) + ' content here';
     }
 });

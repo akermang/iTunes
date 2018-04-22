@@ -3,12 +3,12 @@ main {
   height: 100%;
 }
 
-/* line 7, ../scss/base/_base.scss */
+/* line 5, ../scss/base/_base.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 11, ../scss/base/_base.scss */
+/* line 9, ../scss/base/_base.scss */
 h1 {
   color: #777;
   font-weight: normal;
@@ -17,42 +17,43 @@ h1 {
   margin-left: 5px;
 }
 
-/* line 19, ../scss/base/_base.scss */
+/* line 17, ../scss/base/_base.scss */
 div#results {
   margin: 0 auto;
   width: 95%;
+  min-height: 47vh;
 }
 
-/* line 24, ../scss/base/_base.scss */
+/* line 23, ../scss/base/_base.scss */
 table.result-table {
   margin: 0 auto;
 }
 
-/* line 28, ../scss/base/_base.scss */
+/* line 27, ../scss/base/_base.scss */
 tr {
   border-bottom: 1px solid #CCC;
   padding: 15px 0;
   display: block;
 }
 
-/* line 34, ../scss/base/_base.scss */
+/* line 33, ../scss/base/_base.scss */
 tr.tr-data:hover {
   background: azure;
 }
 
-/* line 38, ../scss/base/_base.scss */
+/* line 37, ../scss/base/_base.scss */
 tr.result-title {
   display: none;
 }
 
-/* line 42, ../scss/base/_base.scss */
+/* line 41, ../scss/base/_base.scss */
 .data-container {
   width: 150px;
   vertical-align: top;
   padding-left: 15px;
 }
 
-/* line 51, ../scss/base/_base.scss */
+/* line 50, ../scss/base/_base.scss */
 .item-link,
 .item-link:hover,
 .item-link:visited,
@@ -61,61 +62,61 @@ tr.result-title {
   color: #333;
 }
 
-/* line 56, ../scss/base/_base.scss */
+/* line 55, ../scss/base/_base.scss */
 .title {
   color: #5786bd;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* line 62, ../scss/base/_base.scss */
+/* line 61, ../scss/base/_base.scss */
 .subtitle {
   color: #777;
   font-size: 12px;
 }
 
-/* line 67, ../scss/base/_base.scss */
+/* line 66, ../scss/base/_base.scss */
 .price {
   color: #333;
   font-weight: bold;
 }
 
-/* line 72, ../scss/base/_base.scss */
+/* line 71, ../scss/base/_base.scss */
 .bin {
   color: #777;
   font-size: 12px;
 }
 
-/* line 77, ../scss/base/_base.scss */
+/* line 76, ../scss/base/_base.scss */
 .fs {
   font-size: 12px;
   font-weight: bold;
 }
 
-/* line 82, ../scss/base/_base.scss */
+/* line 81, ../scss/base/_base.scss */
 .wrapper {
   display: none;
   margin: 60px auto;
   text-align: center;
 }
 
-/* line 88, ../scss/base/_base.scss */
+/* line 87, ../scss/base/_base.scss */
 h1 {
   margin-bottom: 1.25em;
 }
 
-/* line 92, ../scss/base/_base.scss */
+/* line 91, ../scss/base/_base.scss */
 #pagination-demo {
   display: inline-block;
   margin-bottom: 1.75em;
 }
 
-/* line 97, ../scss/base/_base.scss */
+/* line 96, ../scss/base/_base.scss */
 #pagination-demo li {
   display: inline-block;
 }
 
-/* line 101, ../scss/base/_base.scss */
+/* line 100, ../scss/base/_base.scss */
 .page-content {
   background: #eee;
   display: inline-block;
